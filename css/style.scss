@@ -1,0 +1,158 @@
+@import "variables";
+@font-face{
+  font-family: "Existance Light";
+  src: url("../fonts/existence-light-webfont.woff");
+}
+*{
+  box-sizing: border-box;
+}
+img, video, canvas {
+  max-width: 100%;
+}
+.gridContainer {
+  width: 100%;
+  .row {
+    [class*="col-"]{
+      float: left;
+      min-height: 1px;
+      border: 1px solid red;
+    }
+    @for $i from 1 through 12{
+      .col-#{$i} {
+        width: $colWidth * $i;
+      }
+    }
+  }
+  .row:before,
+  .row:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.siteWidth{
+  border: 2px solid gold;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+/* header */
+.headerBackground{
+  width: 100%;
+  background-image: url("../img/headerCover.jpg");
+  padding-bottom: 81%;
+  height:0;
+  background-repeat: no-repeat;
+  border: 4px solid silver;
+}
+.headerLogo h1{
+  margin: 5% 0 0 0;
+  font-family: $logoFontFace;
+  color: $headerTextColor;
+  font-size: 48px;
+  text-align: center;
+  span{
+    color: $secondaryColor;
+  }
+}
+.headerText{
+  margin: 3% 0 0 0;
+  color: $headerTextColor;
+  text-align: center;
+  h2{
+    font-family: $fontLatoHairline;
+    font-size: 48px;
+  }
+  p{
+    margin: 2% 0 0 0;
+    font-family: $fontLatoHairline;
+    font-size: 24px;
+  }
+}
+.headerIcon{
+  text-align: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../img/headerIcons/whiteIconBackground.png");
+  padding: 3% 0;
+  margin: 20% 0 0 0;
+  img{
+    border: 4px solid greenyellow;
+    width: 50%;
+  }
+}
+.headerIcon:hover{
+  background-image: url("../img/headerIcons/purpleIconBackground.png");
+}
+.headerTopIcon{
+  margin: 0 0 20% 0;
+}
+.scroller{
+  text-align: center;
+}
+.cls-1 {
+  fill: #fff;
+  stroke: #fff;
+  stroke-linejoin: round;
+  stroke-width: 4px;
+  fill-opacity: 0.1;
+  fill-rule: evenodd;
+}
+.cls-1:hover{
+  stroke: #9f449b;
+  stroke-linejoin: round;
+  stroke-width: 4px;
+  fill-opacity: 1;
+  fill: #9f449b;
+}
+
+/* sticky menu */
+.menuSticky{
+  padding: 2% 0 5% 0;
+  width: 100%;
+  background-color: white;
+  height: 50px;
+  border: 2px solid black;
+  ul{
+    text-align: right;
+    li{
+      border: 2px solid greenyellow;
+      display: inline;
+      a{
+        font-family: $fontLatoLight;
+        font-size: 18px;
+        color: $menuGreyColor;
+        text-decoration: none;
+        text-transform: uppercase;
+        span{
+          color: $secondaryColor;
+        }
+      }
+    }
+  }
+}
+.menuLogo{
+  text-align: left;
+  border: 3px solid seagreen;
+  font-family: $logoFontFace;
+  font-size: 30px;
+  color: $menuGreyColor;
+  span{
+    color: $secondaryColor;
+  }
+}
+.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* big adjectives let's call it content */
+
+content{
+  background-color: $secondaryBackgroundColor;
+  border: 2px solid gold;
+  height: 100px;
+  padding: 1000px;
+}

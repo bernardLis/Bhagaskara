@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Existance Light";
+  src: url("../fonts/existence-light-webfont.woff");
+}
+* {
+  box-sizing: border-box;
+}
+
+img, video, canvas {
+  max-width: 100%;
+}
+
+.gridContainer {
+  width: 100%;
+}
+.gridContainer .row [class*="col-"] {
+  float: left;
+  min-height: 1px;
+  border: 1px solid red;
+}
+.gridContainer .row .col-1 {
+  width: 8.3%;
+}
+.gridContainer .row .col-2 {
+  width: 16.6%;
+}
+.gridContainer .row .col-3 {
+  width: 24.9%;
+}
+.gridContainer .row .col-4 {
+  width: 33.2%;
+}
+.gridContainer .row .col-5 {
+  width: 41.5%;
+}
+.gridContainer .row .col-6 {
+  width: 49.8%;
+}
+.gridContainer .row .col-7 {
+  width: 58.1%;
+}
+.gridContainer .row .col-8 {
+  width: 66.4%;
+}
+.gridContainer .row .col-9 {
+  width: 74.7%;
+}
+.gridContainer .row .col-10 {
+  width: 83%;
+}
+.gridContainer .row .col-11 {
+  width: 91.3%;
+}
+.gridContainer .row .col-12 {
+  width: 99.6%;
+}
+.gridContainer .row:before,
+.gridContainer .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.siteWidth {
+  border: 2px solid gold;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+/* header */
+.headerBackground {
+  width: 100%;
+  background-image: url("../img/headerCover.jpg");
+  padding-bottom: 81%;
+  height: 0;
+  background-repeat: no-repeat;
+  border: 4px solid silver;
+}
+
+.headerLogo h1 {
+  margin: 5% 0 0 0;
+  font-family: "Existance Light", sans-serif;
+  color: white;
+  font-size: 48px;
+  text-align: center;
+}
+.headerLogo h1 span {
+  color: #9f449b;
+}
+
+.headerText {
+  margin: 3% 0 0 0;
+  color: white;
+  text-align: center;
+}
+.headerText h2 {
+  font-family: "Lato Thin", sans-serif;
+  font-size: 48px;
+}
+.headerText p {
+  margin: 2% 0 0 0;
+  font-family: "Lato Thin", sans-serif;
+  font-size: 24px;
+}
+
+.headerIcon {
+  text-align: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../img/headerIcons/whiteIconBackground.png");
+  padding: 3% 0;
+  margin: 20% 0 0 0;
+}
+.headerIcon img {
+  border: 4px solid greenyellow;
+  width: 50%;
+}
+
+.headerIcon:hover {
+  background-image: url("../img/headerIcons/purpleIconBackground.png");
+}
+
+.headerTopIcon {
+  margin: 0 0 20% 0;
+}
+
+.scroller {
+  text-align: center;
+}
+
+.cls-1 {
+  fill: #fff;
+  stroke: #fff;
+  stroke-linejoin: round;
+  stroke-width: 4px;
+  fill-opacity: 0.1;
+  fill-rule: evenodd;
+}
+
+.cls-1:hover {
+  stroke: #9f449b;
+  stroke-linejoin: round;
+  stroke-width: 4px;
+  fill-opacity: 1;
+  fill: #9f449b;
+}
+
+/* sticky menu */
+.menuSticky {
+  padding: 2% 0 5% 0;
+  width: 100%;
+  background-color: white;
+  height: 50px;
+  border: 2px solid black;
+}
+.menuSticky ul {
+  text-align: right;
+}
+.menuSticky ul li {
+  border: 2px solid greenyellow;
+  display: inline;
+}
+.menuSticky ul li a {
+  font-family: "Lato Light", sans-serif;
+  font-size: 18px;
+  color: #8d8d8d;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.menuSticky ul li a span {
+  color: #9f449b;
+}
+
+.menuLogo {
+  text-align: left;
+  border: 3px solid seagreen;
+  font-family: "Existance Light", sans-serif;
+  font-size: 30px;
+  color: #8d8d8d;
+}
+.menuLogo span {
+  color: #9f449b;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* big adjectives let's call it content */
+content {
+  background-color: #eeeeee;
+  border: 2px solid gold;
+  height: 100px;
+  padding: 1000px;
+}
+
+/*# sourceMappingURL=style.css.map */
