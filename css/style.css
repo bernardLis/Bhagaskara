@@ -2,6 +2,10 @@
   font-family: "Existance Light";
   src: url("../fonts/existence-light-webfont.woff");
 }
+html {
+  font-size: 16px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -82,7 +86,7 @@ img, video, canvas {
   margin: 5% 0 0 0;
   font-family: "Existance Light", sans-serif;
   color: white;
-  font-size: 90px;
+  font-size: 5.5rem;
   text-align: center;
 }
 .headerLogo h1 span {
@@ -96,12 +100,12 @@ img, video, canvas {
 }
 .headerText h2 {
   font-family: "Lato Thin", sans-serif;
-  font-size: 48px;
+  font-size: 3rem;
 }
 .headerText p {
   margin: 2% 0 0 0;
   font-family: "Lato Thin", sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .headerIcon {
@@ -127,10 +131,10 @@ img, video, canvas {
 
 .scroller {
   text-align: center;
-  width: 86px;
+  width: 100%;
 }
-
-.headerBackground .cls-1 {
+.scroller svg {
+  width: 10%;
   fill: #fff;
   stroke: #fff;
   stroke-linejoin: round;
@@ -138,7 +142,7 @@ img, video, canvas {
   fill-opacity: 0.1;
   fill-rule: evenodd;
 }
-.headerBackground .cls-1:hover {
+.scroller svg:hover {
   stroke: #9f449b;
   stroke-linejoin: round;
   stroke-width: 4px;
@@ -147,8 +151,25 @@ img, video, canvas {
 }
 
 /* sticky menu */
+.menu {
+  height: 50px;
+}
+
+.menuLogo {
+  text-align: left;
+  border: 3px solid seagreen;
+  font-family: "Existance Light", sans-serif;
+  font-size: 2rem;
+}
+.menuLogo a {
+  color: #8d8d8d;
+  text-decoration: none;
+}
+.menuLogo span {
+  color: #9f449b;
+}
+
 .menuSticky {
-  padding: 2% 0 5% 0;
   width: 100%;
   background-color: white;
   height: 50px;
@@ -163,7 +184,7 @@ img, video, canvas {
 }
 .menuSticky ul li a {
   font-family: "Lato Light", sans-serif;
-  font-size: 18px;
+  font-size: 1rem;
   color: #8d8d8d;
   text-decoration: none;
   text-transform: uppercase;
@@ -172,43 +193,34 @@ img, video, canvas {
   color: #9f449b;
 }
 
-.menuLogo {
-  text-align: left;
-  border: 3px solid seagreen;
-  font-family: "Existance Light", sans-serif;
-  font-size: 30px;
-  color: #8d8d8d;
-}
-.menuLogo span {
-  color: #9f449b;
-}
-
 .sticky {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
-/* big adjectives let's call it content */
+/* big adjectives let's call it content, changed my mind it is gonna be called feature */
 .feature {
   background-color: #eeeeee;
   border: 2px solid gold;
   padding: 7% 0;
   text-align: center;
 }
-.feature .cls-1, .feature .cls-2 {
-  stroke: black;
+.feature svg {
+  width: 65%;
+  stroke: #ccd0d2;
   stroke-linejoin: round;
   stroke-width: 2px;
   fill: #fff;
   fill-opacity: 0.1;
   fill-rule: evenodd;
+  transition: 1s;
 }
-.feature .cls-1:hover,
-.feature .cls-2:hover {
+.feature svg:hover {
   stroke: #a957a5;
   stroke-linejoin: round;
-  stroke-width: 4px;
+  stroke-width: 2px;
   fill-opacity: 0.1;
   fill: #a957a5;
   fill-rule: evenodd;
@@ -216,12 +228,146 @@ img, video, canvas {
 .feature h4 {
   margin: 15% 0;
   font-family: "Lato Light", sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
+  color: #676767;
 }
 .feature p {
+  color: #676767;
   font-family: "Lato Light", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* about section */
+.about {
+  text-align: center;
+}
+.about .aboutLogo {
+  margin: 10% auto;
+  border: 3px solid green;
+  position: relative;
+  width: 35%;
+}
+.about .aboutLogo h2 {
+  font-family: "Existance Light", sans-serif;
+  color: #676767;
+  font-size: 3rem;
+  padding: 7%;
+}
+.about .aboutLogo h2 span {
+  color: #9f449b;
+}
+.about .aboutLogo svg {
+  fill: #9f449b;
+  fill-rule: evenodd;
+  width: 5%;
+}
+.about .aboutLogo #aboutLogoRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.about .aboutLogo #aboutLogoLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.about .aboutContent {
+  margin: 0 0 15% 0;
+}
+.about .aboutContent p {
+  margin: 20% 0;
+  font-family: "Lato Light", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.about .aboutContent a {
+  padding: 4% 8%;
+  border-radius: 6px;
+  color: white;
+  width: 230px;
+  height: 75px;
+  background-color: #9f449b;
+  font-family: "Lato Light", sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+/* quote section */
+.quote {
+  background-image: url("../img/quoteBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  padding: 0 0 20% 0;
+  text-align: center;
+}
+.quote svg {
+  margin: 20% 0 10% 0;
+  fill: #fff;
+  fill-rule: evenodd;
+  stroke: #fff;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+  fill-opacity: 0.1;
+}
+.quote h2 {
+  font-family: "Lato Light", sans-serif;
+  font-size: 3rem;
+  color: white;
+}
+
+/* team section */
+.team .teamLogo {
+  text-align: center;
+  border: 3px solid green;
+  width: 30%;
+  margin: 10% auto;
+  position: relative;
+}
+.team .teamLogo h2 {
+  padding: 7%;
+  font-family: "Existance Light", sans-serif;
+  font-size: 3em;
+}
+.team .teamLogo h2 span {
+  color: #9f449b;
+}
+.team .teamLogo svg {
+  width: 5%;
+  fill: #9f449b;
+  fill-rule: evenodd;
+}
+.team .teamLogo #teamLogoRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.team .teamLogo #teamLogoLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.team .teamArrowLeft {
+  text-align: right;
+}
+.team svg {
+  width: 10%;
+  stroke: #ccd0d2;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  fill: #fff;
+  fill-opacity: 0.1;
+  fill-rule: evenodd;
+  transition: 1s;
+}
+.team svg:hover {
+  stroke: #a957a5;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  fill-opacity: 0.1;
+  fill: #a957a5;
+  fill-rule: evenodd;
 }
 
 /*# sourceMappingURL=style.css.map */

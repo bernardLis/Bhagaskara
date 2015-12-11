@@ -3,6 +3,9 @@
   font-family: "Existance Light";
   src: url("../fonts/existence-light-webfont.woff");
 }
+html{
+  font-size: 16px;
+}
 *{
   box-sizing: border-box;
 }
@@ -50,7 +53,7 @@ img, video, canvas {
   margin: 5% 0 0 0;
   font-family: $logoFontFace;
   color: $headerTextColor;
-  font-size: 90px;
+  font-size: 5.5rem;
   text-align: center;
   span{
     color: $secondaryColor;
@@ -62,12 +65,12 @@ img, video, canvas {
   text-align: center;
   h2{
     font-family: $headerFontFace;
-    font-size: 48px;
+    font-size: 3rem;
   }
   p{
     margin: 2% 0 0 0;
     font-family: $headerFontFace;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 .headerIcon{
@@ -90,28 +93,44 @@ img, video, canvas {
 }
 .scroller{
   text-align: center;
-  width: 86px;
-}
-.headerBackground{
-  .cls-1 {
+  width: 100%;
+  svg {
+    width: 10%;
     fill: #fff;
     stroke: #fff;
     stroke-linejoin: round;
     stroke-width: 4px;
     fill-opacity: 0.1;
     fill-rule: evenodd;
-    }
-  .cls-1:hover{
+  }
+  svg:hover{
     stroke: #9f449b;
     stroke-linejoin: round;
     stroke-width: 4px;
     fill-opacity: 1;
     fill: #9f449b;
+  }
 }
-}
+
 /* sticky menu */
+.menu{
+  height: 50px;
+}
+.menuLogo{
+  text-align: left;
+  border: 3px solid seagreen;
+  font-family: $logoFontFace;
+  font-size: 2rem;
+  a{
+    color: $menuGreyColor;
+    text-decoration: none;
+  }
+  span{
+    color: $secondaryColor;
+  }
+}
 .menuSticky{
-  padding: 2% 0 5% 0;
+
   width: 100%;
   background-color: white;
   height: 50px;
@@ -123,7 +142,7 @@ img, video, canvas {
       display: inline;
       a{
         font-family: $headlineFontFace;
-        font-size: 18px;
+        font-size: 1rem;
         color: $menuGreyColor;
         text-decoration: none;
         text-transform: uppercase;
@@ -134,42 +153,34 @@ img, video, canvas {
     }
   }
 }
-.menuLogo{
-  text-align: left;
-  border: 3px solid seagreen;
-  font-family: $logoFontFace;
-  font-size: 30px;
-  color: $menuGreyColor;
-  span{
-    color: $secondaryColor;
-  }
-}
 .sticky{
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
-/* big adjectives let's call it content */
+/* big adjectives let's call it content, changed my mind it is gonna be called feature */
 
 .feature{
   background-color: $secondaryBackgroundColor;
   border: 2px solid gold;
   padding: 7% 0;
   text-align: center;
-  .cls-1, .cls-2 {
-    stroke: black;
+  svg {
+    width: 65%;
+    stroke: $featureIconStrokeColor;
     stroke-linejoin: round;
     stroke-width: 2px;
     fill: #fff;
     fill-opacity: 0.1;
     fill-rule: evenodd;
+    transition: 1s;
   }
-  .cls-1:hover,
-  .cls-2:hover {
+  svg:hover {
     stroke: $featureIconStrokeHoverColor;
     stroke-linejoin: round;
-    stroke-width: 4px;
+    stroke-width: 2px;
     fill-opacity: 0.1;
     fill: $featureIconStrokeHoverColor;
     fill-rule: evenodd;
@@ -177,11 +188,151 @@ img, video, canvas {
   h4{
     margin: 15% 0;
     font-family: $headlineFontFace;
-    font-size: 24px;
+    font-size: 1.5rem;
+    color: $featureTextColor;
   }
   p{
+    color: $featureTextColor;
     font-family: $headlineFontFace;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
+
+/* about section */
+
+.about{
+  text-align: center;
+  .aboutLogo{
+    margin: 10% auto;
+    border: 3px solid green;
+    position: relative;
+    width: 35%;
+    h2{
+      font-family: $logoFontFace;
+      color: $featureTextColor;
+      font-size: 3rem;
+      padding: 7%;
+      span{
+        color: $secondaryColor;
+      }
+    }
+    svg {
+      fill: $secondaryColor;
+      fill-rule: evenodd;
+      width: 5%;
+    }
+    #aboutLogoRight{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    #aboutLogoLeft{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  .aboutContent{
+    margin: 0 0 15% 0;
+    p{
+      margin: 20% 0;
+      font-family: $headlineFontFace;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    a{
+      padding: 4% 8%;
+      border-radius: 6px;
+      color: white;
+      width: 230px;
+      height: 75px;
+      background-color: $secondaryColor;
+      font-family: $headlineFontFace;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+  }
+}
+
+/* quote section */
+
+.quote{
+  background-image: url("../img/quoteBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  padding: 0 0 20% 0;
+  text-align: center;
+  svg{
+    margin: 20% 0 10% 0;
+    fill: #fff;
+    fill-rule: evenodd;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-width: 3px;
+    fill-opacity: 0.1;
+  }
+  h2{
+    font-family: $headlineFontFace;
+    font-size: 3rem;
+    color: white;
+  }
+}
+
+/* team section */
+
+.team{
+  .teamLogo{
+    text-align: center;
+    border: 3px solid green;
+    width: 30%;
+    margin: 10% auto;
+    position: relative;
+    h2{
+      padding: 7%;
+      font-family: $logoFontFace;
+      font-size: 3em;
+      span{
+        color: $secondaryColor;
+      }
+    }
+    svg{
+      width: 5%;
+      fill: $secondaryColor;
+      fill-rule: evenodd;
+    }
+    #teamLogoRight{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    #teamLogoLeft{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  .teamArrowLeft {
+    text-align: right;
+  }
+  svg {
+    width: 10%;
+    stroke: $featureIconStrokeColor;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    fill: #fff;
+    fill-opacity: 0.1;
+    fill-rule: evenodd;
+    transition: 1s;
+  }
+  svg:hover {
+    stroke: $featureIconStrokeHoverColor;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    fill-opacity: 0.1;
+    fill: $featureIconStrokeHoverColor;
+    fill-rule: evenodd;
+  }
+}
+
