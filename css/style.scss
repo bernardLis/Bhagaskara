@@ -50,23 +50,23 @@ img, video, canvas {
   margin: 5% 0 0 0;
   font-family: $logoFontFace;
   color: $headerTextColor;
-  font-size: 48px;
+  font-size: 90px;
   text-align: center;
   span{
     color: $secondaryColor;
   }
 }
 .headerText{
-  margin: 3% 0 0 0;
+  margin: 7% 0;
   color: $headerTextColor;
   text-align: center;
   h2{
-    font-family: $fontLatoHairline;
+    font-family: $headerFontFace;
     font-size: 48px;
   }
   p{
     margin: 2% 0 0 0;
-    font-family: $fontLatoHairline;
+    font-family: $headerFontFace;
     font-size: 24px;
   }
 }
@@ -90,23 +90,25 @@ img, video, canvas {
 }
 .scroller{
   text-align: center;
+  width: 86px;
 }
-.cls-1 {
-  fill: #fff;
-  stroke: #fff;
-  stroke-linejoin: round;
-  stroke-width: 4px;
-  fill-opacity: 0.1;
-  fill-rule: evenodd;
+.headerBackground{
+  .cls-1 {
+    fill: #fff;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-width: 4px;
+    fill-opacity: 0.1;
+    fill-rule: evenodd;
+    }
+  .cls-1:hover{
+    stroke: #9f449b;
+    stroke-linejoin: round;
+    stroke-width: 4px;
+    fill-opacity: 1;
+    fill: #9f449b;
 }
-.cls-1:hover{
-  stroke: #9f449b;
-  stroke-linejoin: round;
-  stroke-width: 4px;
-  fill-opacity: 1;
-  fill: #9f449b;
 }
-
 /* sticky menu */
 .menuSticky{
   padding: 2% 0 5% 0;
@@ -120,7 +122,7 @@ img, video, canvas {
       border: 2px solid greenyellow;
       display: inline;
       a{
-        font-family: $fontLatoLight;
+        font-family: $headlineFontFace;
         font-size: 18px;
         color: $menuGreyColor;
         text-decoration: none;
@@ -150,9 +152,36 @@ img, video, canvas {
 
 /* big adjectives let's call it content */
 
-content{
+.feature{
   background-color: $secondaryBackgroundColor;
   border: 2px solid gold;
-  height: 100px;
-  padding: 1000px;
+  padding: 7% 0;
+  text-align: center;
+  .cls-1, .cls-2 {
+    stroke: black;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    fill: #fff;
+    fill-opacity: 0.1;
+    fill-rule: evenodd;
+  }
+  .cls-1:hover,
+  .cls-2:hover {
+    stroke: $featureIconStrokeHoverColor;
+    stroke-linejoin: round;
+    stroke-width: 4px;
+    fill-opacity: 0.1;
+    fill: $featureIconStrokeHoverColor;
+    fill-rule: evenodd;
+  }
+  h4{
+    margin: 15% 0;
+    font-family: $headlineFontFace;
+    font-size: 24px;
+  }
+  p{
+    font-family: $headlineFontFace;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

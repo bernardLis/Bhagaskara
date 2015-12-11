@@ -82,7 +82,7 @@ img, video, canvas {
   margin: 5% 0 0 0;
   font-family: "Existance Light", sans-serif;
   color: white;
-  font-size: 48px;
+  font-size: 90px;
   text-align: center;
 }
 .headerLogo h1 span {
@@ -90,7 +90,7 @@ img, video, canvas {
 }
 
 .headerText {
-  margin: 3% 0 0 0;
+  margin: 7% 0;
   color: white;
   text-align: center;
 }
@@ -127,9 +127,10 @@ img, video, canvas {
 
 .scroller {
   text-align: center;
+  width: 86px;
 }
 
-.cls-1 {
+.headerBackground .cls-1 {
   fill: #fff;
   stroke: #fff;
   stroke-linejoin: round;
@@ -137,8 +138,7 @@ img, video, canvas {
   fill-opacity: 0.1;
   fill-rule: evenodd;
 }
-
-.cls-1:hover {
+.headerBackground .cls-1:hover {
   stroke: #9f449b;
   stroke-linejoin: round;
   stroke-width: 4px;
@@ -190,11 +190,38 @@ img, video, canvas {
 }
 
 /* big adjectives let's call it content */
-content {
+.feature {
   background-color: #eeeeee;
   border: 2px solid gold;
-  height: 100px;
-  padding: 1000px;
+  padding: 7% 0;
+  text-align: center;
+}
+.feature .cls-1, .feature .cls-2 {
+  stroke: black;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  fill: #fff;
+  fill-opacity: 0.1;
+  fill-rule: evenodd;
+}
+.feature .cls-1:hover,
+.feature .cls-2:hover {
+  stroke: #a957a5;
+  stroke-linejoin: round;
+  stroke-width: 4px;
+  fill-opacity: 0.1;
+  fill: #a957a5;
+  fill-rule: evenodd;
+}
+.feature h4 {
+  margin: 15% 0;
+  font-family: "Lato Light", sans-serif;
+  font-size: 24px;
+}
+.feature p {
+  font-family: "Lato Light", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */
