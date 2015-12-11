@@ -316,23 +316,43 @@ img, video, canvas {
   .teamArrowLeft {
     text-align: right;
   }
-  svg {
-    width: 10%;
-    stroke: $featureIconStrokeColor;
-    stroke-linejoin: round;
-    stroke-width: 2px;
-    fill: #fff;
-    fill-opacity: 0.1;
-    fill-rule: evenodd;
-    transition: 1s;
+  .teamArrowRight{
+    padding: 4px 0 0 4px;
+    text-align: left;
   }
-  svg:hover {
-    stroke: $featureIconStrokeHoverColor;
-    stroke-linejoin: round;
-    stroke-width: 2px;
-    fill-opacity: 0.1;
-    fill: $featureIconStrokeHoverColor;
-    fill-rule: evenodd;
+  .teamPortraitContent{
+    margin: 30% auto;
+    border: 3px solid cornflowerblue;
+    width: 65%;
+    text-align: center;
+    .teamPortrait{
+      margin: 0 0 20% 0;
+      width: 100%;
+      padding-bottom: 100%;
+      border-radius: 50%;
+      background-color: $menuGreyColor;
+      background-size: contain;
+    }
+    h3{
+      font-family: $teamNameFont;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      color: $teamNameFontColor;
+    }
+    p{
+      font-family: $teamPositionFont;
+      font-size: 1.1rem;
+      line-height: 2rem;
+      color: $teamPositionFontColor;
+    }
+    #hakeemFb{
+      background: url('../img/sprite.png') no-repeat 0 0;
+      width: 46px;
+      height: 46px;
+      padding-bottom: 0%;
+    }
   }
+
+
 }
 
