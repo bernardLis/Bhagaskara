@@ -325,6 +325,7 @@ img, video, canvas {
     border: 3px solid cornflowerblue;
     width: 65%;
     text-align: center;
+    padding: 0 0 15% 0;
     .teamPortrait{
       margin: 0 0 20% 0;
       width: 100%;
@@ -344,15 +345,90 @@ img, video, canvas {
       font-size: 1.1rem;
       line-height: 2rem;
       color: $teamPositionFontColor;
+      margin: 0 0 7% 0;
     }
-    #hakeemFb{
-      background: url('../img/sprite.png') no-repeat 0 0;
-      width: 46px;
-      height: 46px;
-      padding-bottom: 0%;
+    .teamSocialSprite{
+      #hakeemFb{
+        background: url('../img/sprite.png') no-repeat 0 -1px;
+        width: 48px;
+        height: 47px;
+        padding: 0 25% 15% 0;
+        margin: 0 7% 0 0;
+      }
+      #hakeemGplus{
+        background: url('../img/sprite.png') no-repeat -52px -1px;
+        width: 47px;
+        height: 47px;
+        padding: 0 25% 15% 0;
+      }
+      #williamsFb{
+        background: url('../img/sprite.png') no-repeat 0 -1px;
+        width: 48px;
+        height: 47px;
+        padding: 0 25% 15% 0;
+        margin: 0 7% 0 0;
+      }
+      #williamsGplus{
+        background: url('../img/sprite.png') no-repeat -52px -1px;
+        width: 47px;
+        height: 47px;
+        padding: 0 25% 15% 0;
+      }
+      #smithFb{
+        background: url('../img/sprite.png') no-repeat 0 -1px;
+        width: 48px;
+        height: 47px;
+        padding: 0 25% 15% 0;
+        margin: 0 7% 0 0;
+      }
+      #smithGplus{
+        background: url('../img/sprite.png') no-repeat -52px -1px;
+        width: 47px;
+        height: 47px;
+        padding: 0 25% 15% 0;
+      }
+    }
+  }
+}
+.ourSkillsLogo{
+    text-align: center;
+    border: 3px solid green;
+    width: 30%;
+    margin: 10% auto;
+    position: relative;
+    h2{
+      padding: 7%;
+      font-family: $logoFontFace;
+      font-size: 3em;
+      span{
+        color: $secondaryColor;
+      }
+    }
+    svg{
+      width: 5%;
+      fill: $secondaryColor;
+      fill-rule: evenodd;
+    }
+    #ourSkillsLogoRight{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    #ourSkillsLogoLeft{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+}
+
+.ourSkillsWebDesign{
+  h3{
+    padding: 0 55% 0 5%;
+    text-transform: uppercase;
+    font-family: $ourSkillsFont;
+    font-size: 1.6rem;
+    span{
     }
   }
 
-
 }
-

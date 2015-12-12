@@ -360,6 +360,7 @@ img, video, canvas {
   border: 3px solid cornflowerblue;
   width: 65%;
   text-align: center;
+  padding: 0 0 15% 0;
 }
 .team .teamPortraitContent .teamPortrait {
   margin: 0 0 20% 0;
@@ -380,12 +381,84 @@ img, video, canvas {
   font-size: 1.1rem;
   line-height: 2rem;
   color: #a4a4a4;
+  margin: 0 0 7% 0;
 }
-.team .teamPortraitContent #hakeemFb {
-  background: url("../img/sprite.png") no-repeat 0 0;
-  width: 46px;
-  height: 46px;
-  padding-bottom: 0%;
+.team .teamPortraitContent .teamSocialSprite #hakeemFb {
+  background: url("../img/sprite.png") no-repeat 0 -1px;
+  width: 48px;
+  height: 47px;
+  padding: 0 25% 15% 0;
+  margin: 0 7% 0 0;
+}
+.team .teamPortraitContent .teamSocialSprite #hakeemGplus {
+  background: url("../img/sprite.png") no-repeat -52px -1px;
+  width: 47px;
+  height: 47px;
+  padding: 0 25% 15% 0;
+}
+.team .teamPortraitContent .teamSocialSprite #williamsFb {
+  background: url("../img/sprite.png") no-repeat 0 -1px;
+  width: 48px;
+  height: 47px;
+  padding: 0 25% 15% 0;
+  margin: 0 7% 0 0;
+}
+.team .teamPortraitContent .teamSocialSprite #williamsGplus {
+  background: url("../img/sprite.png") no-repeat -52px -1px;
+  width: 47px;
+  height: 47px;
+  padding: 0 25% 15% 0;
+}
+.team .teamPortraitContent .teamSocialSprite #smithFb {
+  background: url("../img/sprite.png") no-repeat 0 -1px;
+  width: 48px;
+  height: 47px;
+  padding: 0 25% 15% 0;
+  margin: 0 7% 0 0;
+}
+.team .teamPortraitContent .teamSocialSprite #smithGplus {
+  background: url("../img/sprite.png") no-repeat -52px -1px;
+  width: 47px;
+  height: 47px;
+  padding: 0 25% 15% 0;
+}
+
+.ourSkillsLogo {
+  text-align: center;
+  border: 3px solid green;
+  width: 30%;
+  margin: 10% auto;
+  position: relative;
+}
+.ourSkillsLogo h2 {
+  padding: 7%;
+  font-family: "Existance Light", sans-serif;
+  font-size: 3em;
+}
+.ourSkillsLogo h2 span {
+  color: #9f449b;
+}
+.ourSkillsLogo svg {
+  width: 5%;
+  fill: #9f449b;
+  fill-rule: evenodd;
+}
+.ourSkillsLogo #ourSkillsLogoRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.ourSkillsLogo #ourSkillsLogoLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.ourSkillsWebDesign h3 {
+  padding: 0 55% 0 5%;
+  text-transform: uppercase;
+  font-family: "HelveticaNeueLTStd Bd";
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
