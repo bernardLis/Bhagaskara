@@ -426,12 +426,12 @@ img, video, canvas {
   .ourSkillsSkills {
     h3 {
       text-transform: uppercase;
-      font-family: $ourSkillsFont;
+      font-family: $teamNameFont;
       font-size: 1.6rem;
       margin: 10% 0 5% 0;
       span {
         float: right;
-        font-family: $ourSkillsSecondaryFont;
+        font-family: $teamPositionFont;
         color: $menuGreyColor;
         margin: 0 10% 0 0;
       }
@@ -472,15 +472,57 @@ img, video, canvas {
   background-color: $secondaryBackgroundColor;
   text-align: center;
   h2{
-    font-family: $ourSkillsSecondaryFont;
+    font-family: $teamNameFont;
     font-size: 4rem;
     margin: 5% 0;
   }
   p{
-    font-family: $ourSkillsSecondaryFont;
+    font-family: $teamPositionFont;
     font-size: 1rem;
     line-height: 1.5rem;
     color: $statisticsPColor;
   }
 }
 
+/* testimonials section */
+.testimonials{
+  background-color: $secondaryBackgroundColor;
+  padding: 10% 0;
+  .testimonialsSlider{
+    text-align: center;
+    .testimonialsPortraitContainer{
+      width: 20%;
+      margin: 0 auto;
+      border: 2px solid palegreen;
+      .testimonialsPortrait{
+        margin: 0 0 20% 0;
+        width: 100%;
+        padding-bottom: 100%;
+        border-radius: 50%;
+        background-color: $menuGreyColor;
+        background-size: contain;
+      }
+    }
+    ul{
+      list-style: none;
+      border: 2px solid darkolivegreen;
+      p{
+        margin: 5% 0;
+        color: $testimonialsPColor;
+        font-family: $teamPositionFont;
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+      h4{
+        margin: 0 0 3% 0;
+        color: $testimonialsPColor;
+        font-family: $teamNameFont;
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+    .invisible{
+      display: none;
+    }
+  }
+}

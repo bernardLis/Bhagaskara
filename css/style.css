@@ -460,13 +460,13 @@ img, video, canvas {
 }
 .ourSkillsContainer .ourSkillsSkills h3 {
   text-transform: uppercase;
-  font-family: "HelveticaNeueLTStd Bd", sans-serif;
+  font-family: "Lato Bold", sans-serif;
   font-size: 1.6rem;
   margin: 10% 0 5% 0;
 }
 .ourSkillsContainer .ourSkillsSkills h3 span {
   float: right;
-  font-family: "HelveticaNeueLTStd Lt", sans-serif;
+  font-family: "Lato Regular", sans-serif;
   color: #8d8d8d;
   margin: 0 10% 0 0;
 }
@@ -503,15 +503,58 @@ img, video, canvas {
   text-align: center;
 }
 .statistics h2 {
-  font-family: "HelveticaNeueLTStd Lt", sans-serif;
+  font-family: "Lato Bold", sans-serif;
   font-size: 4rem;
   margin: 5% 0;
 }
 .statistics p {
-  font-family: "HelveticaNeueLTStd Lt", sans-serif;
+  font-family: "Lato Regular", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   color: #777777;
+}
+
+/* testimonials section */
+.testimonials {
+  background-color: #eeeeee;
+  padding: 10% 0;
+}
+.testimonials .testimonialsSlider {
+  text-align: center;
+}
+.testimonials .testimonialsSlider .testimonialsPortraitContainer {
+  width: 20%;
+  margin: 0 auto;
+  border: 2px solid palegreen;
+}
+.testimonials .testimonialsSlider .testimonialsPortraitContainer .testimonialsPortrait {
+  margin: 0 0 20% 0;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  background-color: #8d8d8d;
+  background-size: contain;
+}
+.testimonials .testimonialsSlider ul {
+  list-style: none;
+  border: 2px solid darkolivegreen;
+}
+.testimonials .testimonialsSlider ul p {
+  margin: 5% 0;
+  color: #4b4b4b;
+  font-family: "Lato Regular", sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+.testimonials .testimonialsSlider ul h4 {
+  margin: 0 0 3% 0;
+  color: #4b4b4b;
+  font-family: "Lato Bold", sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+.testimonials .testimonialsSlider .invisible {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
