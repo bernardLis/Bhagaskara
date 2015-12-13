@@ -262,10 +262,11 @@ img, video, canvas {
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  padding: 0 0 20% 0;
+  padding: 0 0 10% 0;
   text-align: center;
   svg{
-    margin: 20% 0 10% 0;
+    width: 15%;
+    margin: 10% 0 10% 0;
     fill: #fff;
     fill-rule: evenodd;
     stroke: #fff;
@@ -352,7 +353,7 @@ img, video, canvas {
         background: url('../img/sprite.png') no-repeat 0 -1px;
         width: 48px;
         height: 47px;
-        padding: 0 25% 15% 0;
+        padding: 0 22% 15% 0;
         margin: 0 7% 0 0;
       }
       #hakeemGplus{
@@ -365,7 +366,7 @@ img, video, canvas {
         background: url('../img/sprite.png') no-repeat 0 -1px;
         width: 48px;
         height: 47px;
-        padding: 0 25% 15% 0;
+        padding: 0 22% 15% 0;
         margin: 0 7% 0 0;
       }
       #williamsGplus{
@@ -378,7 +379,7 @@ img, video, canvas {
         background: url('../img/sprite.png') no-repeat 0 -1px;
         width: 48px;
         height: 47px;
-        padding: 0 25% 15% 0;
+        padding: 0 22% 15% 0;
         margin: 0 7% 0 0;
       }
       #smithGplus{
@@ -420,15 +421,66 @@ img, video, canvas {
       left: 0;
     }
 }
-
-.ourSkillsWebDesign{
-  h3{
-    padding: 0 55% 0 5%;
-    text-transform: uppercase;
-    font-family: $ourSkillsFont;
-    font-size: 1.6rem;
-    span{
+.ourSkillsContainer{
+  margin: 10% 0 25% 0;
+  .ourSkillsSkills {
+    h3 {
+      text-transform: uppercase;
+      font-family: $ourSkillsFont;
+      font-size: 1.6rem;
+      margin: 10% 0 5% 0;
+      span {
+        float: right;
+        font-family: $ourSkillsSecondaryFont;
+        color: $menuGreyColor;
+        margin: 0 10% 0 0;
+      }
     }
   }
-
 }
+
+/* service with amazing quote */
+
+.services{
+  background-image: url("../img/quoteBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  padding: 0 0 10% 0;
+  text-align: center;
+  svg{
+    width: 15%;
+    margin: 10% 0 10% 0;
+    fill: #fff;
+    fill-rule: evenodd;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-width: 3px;
+    fill-opacity: 0.1;
+  }
+  h2{
+    font-family: $headlineFontFace;
+    font-size: 3rem;
+    color: white;
+  }
+}
+
+/* statistics section */
+
+.statistics{
+  padding: 10% 0;
+  background-color: $secondaryBackgroundColor;
+  text-align: center;
+  h2{
+    font-family: $ourSkillsSecondaryFont;
+    font-size: 4rem;
+    margin: 5% 0;
+  }
+  p{
+    font-family: $ourSkillsSecondaryFont;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $statisticsPColor;
+  }
+}
+

@@ -5,7 +5,9 @@ $headerFontFace: "Lato Thin", sans-serif;
 $headlineFontFace: "Lato Light", sans-serif;
 $teamNameFont: "Lato Bold", sans-serif;
 $teamPositionFont: "Lato Regular", sans-serif;
-$ourSkillsFont: "HelveticaNeueLTStd Bd";
+$ourSkillsFont: "HelveticaNeueLTStd Bd", sans-serif;
+$ourSkillsSecondaryFont: "HelveticaNeueLTStd Lt", sans-serif;
+
 
 $secondaryColor: #9f449b;
 $headerTextColor: white;
@@ -16,3 +18,5 @@ $featureIconStrokeHoverColor: #a957a5;
 $featureTextColor: #676767;
 $teamNameFontColor: #484848;
 $teamPositionFontColor: #a4a4a4;
+$ourSkillsEmptyBar: #f0f0f0;
+$statisticsPColor: #777777;
