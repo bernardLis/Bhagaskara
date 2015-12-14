@@ -40,5 +40,17 @@ $(document).ready(function(){
             listWithPictures.eq(visiblePicture).removeClass("invisible");
         });
     }
-    testimonialsSlider()
+    testimonialsSlider();
+    function galleryHover (){
+        var pictureBox = $(".portfolioPhotoItem");
+        var portfolioImgOverlay = $(".portfolioImgOverlay");
+
+        pictureBox.hover(function(){
+           $(this).find(portfolioImgOverlay).show();
+        }, function(){
+            $(this).find(portfolioImgOverlay).hide();
+        });
+    }
+    galleryHover()
+
 });
