@@ -242,15 +242,14 @@ img, video, canvas {
       line-height: 1.5rem;
     }
     a{
-      padding: 4% 8%;
-      border-radius: 6px;
-      color: white;
-      width: 230px;
-      height: 75px;
+      padding: 4% 7%;
+      border-radius: 5%;
       background-color: $secondaryColor;
+      text-decoration: none;
+      color: $headerTextColor;
       font-family: $headlineFontFace;
       font-size: 1.5rem;
-      text-decoration: none;
+      box-shadow: -2px 4px 5px 0px rgba(0,0,0,0.75);
     }
   }
 }
@@ -334,6 +333,7 @@ img, video, canvas {
       border-radius: 50%;
       background-color: $menuGreyColor;
       background-size: contain;
+
     }
     h3{
       font-family: $teamNameFont;
@@ -349,44 +349,18 @@ img, video, canvas {
       margin: 0 0 7% 0;
     }
     .teamSocialSprite{
-      #hakeemFb{
-        background: url('../img/sprite.png') no-repeat 0 -1px;
-        width: 48px;
-        height: 47px;
-        padding: 0 22% 15% 0;
-        margin: 0 7% 0 0;
+      .spriteIcon{
+        background: url(../img/sprite.png) no-repeat;
+        width: 20%;
+        padding: 0 0 20% 0;
+        display: inline-block;
+        background-size: 385.41% 302.12%;
       }
-      #hakeemGplus{
-        background: url('../img/sprite.png') no-repeat -52px -1px;
-        width: 47px;
-        height: 47px;
-        padding: 0 25% 15% 0;
+      .fbIcon{
+        background-position: 0 1%;
       }
-      #williamsFb{
-        background: url('../img/sprite.png') no-repeat 0 -1px;
-        width: 48px;
-        height: 47px;
-        padding: 0 22% 15% 0;
-        margin: 0 7% 0 0;
-      }
-      #williamsGplus{
-        background: url('../img/sprite.png') no-repeat -52px -1px;
-        width: 47px;
-        height: 47px;
-        padding: 0 25% 15% 0;
-      }
-      #smithFb{
-        background: url('../img/sprite.png') no-repeat 0 -1px;
-        width: 48px;
-        height: 47px;
-        padding: 0 22% 15% 0;
-        margin: 0 7% 0 0;
-      }
-      #smithGplus{
-        background: url('../img/sprite.png') no-repeat -52px -1px;
-        width: 47px;
-        height: 47px;
-        padding: 0 25% 15% 0;
+      .gPlusIcon{
+        background-position: 37.95% 1%;
       }
     }
   }
@@ -627,14 +601,99 @@ img, video, canvas {
     margin: 7% 0;
     a{
       padding: 2% 4%;
-      width: 225px;
-      height: 75px;
       border-radius: 5%;
       text-decoration: none;
       color: $headerTextColor;
       background-color: $secondaryColor;
       font-size: 1.5rem;
       font-family: $headlineFontFace;
-      box-shadow: -2px 4px 5px 0px rgba(0,0,0,0.75);    }
+      box-shadow: -2px 4px 5px 0px rgba(0,0,0,0.75);
+    }
+  }
+}
+
+/* contact section */
+.contact {
+  text-align: center;
+  .contactLogo {
+    text-align: center;
+    border: 3px solid green;
+    width: 50%;
+    margin: 10% auto;
+    position: relative;
+    h2 {
+      padding: 7%;
+      font-family: $logoFontFace;
+      font-size: 3em;
+      span {
+        color: $secondaryColor;
+      }
+    }
+    svg {
+      width: 5%;
+      fill: $secondaryColor;
+      fill-rule: evenodd;
+    }
+    #contactLogoRight {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    #contactLogoLeft {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  .contactForm {
+    .contactFormInput {
+      border: 1px solid $teamNameFontColor;
+      width: 90%;
+      margin: 3%;
+      padding: 3%;
+      font-family: $teamPositionFont;
+      font-size: 1.5rem;
+    }
+    #contactMessage{
+      resize:none;
+      margin: 3% 3% 7% 3%;
+    }
+    /* placeholderc colour - i'd prefer grey but well... im gonna change it,
+     it is my site.. and i am supposed to like it. */
+    *::-webkit-input-placeholder {
+      color: $featureTextColor;
+    }
+    *:-moz-placeholder {
+      color: $featureTextColor;
+    }
+    *::-moz-placeholder {
+      color: $featureTextColor;
+    }
+    *:-ms-input-placeholder {
+      color: $featureTextColor;
+    }
+    #contactSend{
+      padding: 4% 7%;
+      border-radius: 5%;
+      background-color: $secondaryColor;
+      text-decoration: none;
+      color: $headerTextColor;
+      font-family: $headlineFontFace;
+      font-size: 1.5rem;
+      box-shadow: -2px 4px 5px 0px rgba(0,0,0,0.75);
+    }
+  }
+  #contactText{
+    margin: 1% 0% 7% 5%;
+    font-family: "Lato Light", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .contactInfo{
+    text-align: left;
+    font-family: $teamNameFont;
+    font-weight: bold;
+    margin: 0% 0% 7% 5%;
+    font-size: 1.5rem;
   }
 }
