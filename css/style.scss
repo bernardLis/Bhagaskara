@@ -122,7 +122,7 @@ img, video, canvas {
   font-family: $logoFontFace;
   font-size: 2rem;
   a{
-    color: $menuGreyColor;
+    color: $teamNameFontColor;
     text-decoration: none;
   }
   span{
@@ -210,7 +210,7 @@ img, video, canvas {
     width: 35%;
     h2{
       font-family: $logoFontFace;
-      color: $featureTextColor;
+      color: $teamNameFontColor;
       font-size: 3rem;
       padding: 7%;
       span{
@@ -290,6 +290,7 @@ img, video, canvas {
     margin: 10% auto;
     position: relative;
     h2{
+      color: $teamNameFontColor;
       padding: 7%;
       font-family: $logoFontFace;
       font-size: 3em;
@@ -372,6 +373,7 @@ img, video, canvas {
     margin: 10% auto;
     position: relative;
     h2{
+      color: $teamNameFontColor;
       padding: 7%;
       font-family: $logoFontFace;
       font-size: 3em;
@@ -498,6 +500,25 @@ img, video, canvas {
     .invisible{
       display: none;
     }
+    .ol li{
+      display: inline-block;
+      width: 10px;
+      height: 20px;
+      padding: 2%;
+      border-radius: 20%;
+    }
+  }
+  .sliderNav{
+    text-align: center;
+    li{
+      display: inline-block;
+      padding: 1%;
+      background-color: burlywood;
+      border-radius: 50%;
+    }
+    .sliderNavNotActiveSlide{
+      background-color: goldenrod;
+    }
   }
 }
 
@@ -510,6 +531,7 @@ img, video, canvas {
     margin: 10% auto;
     position: relative;
     h2 {
+      color: $teamNameFontColor;
       padding: 7%;
       font-family: $logoFontFace;
       font-size: 3em;
@@ -581,6 +603,7 @@ img, video, canvas {
           margin: auto;
           font-family: $headerFontFace;
           font-size: 12rem;
+          cursor: pointer;
         }
       }
     }
@@ -595,6 +618,21 @@ img, video, canvas {
       font-size: 1rem;
       color: $statisticsPColor;
     }
+  }
+  .portfolioOverlayBig{
+    display: none;
+  }
+  .portfolioOverlayBigDisplay{
+    z-index: 1;
+    display: block;
+    width: 100%;
+    position: fixed;
+    padding: 20%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    background-color: $portfolioOverlayBackgroundColor;
   }
   .portfolioBottomButton{
     text-align: center;
@@ -622,6 +660,7 @@ img, video, canvas {
     margin: 10% auto;
     position: relative;
     h2 {
+      color: $teamNameFontColor;
       padding: 7%;
       font-family: $logoFontFace;
       font-size: 3em;
@@ -684,7 +723,7 @@ img, video, canvas {
     }
   }
   #contactText{
-    margin: 1% 0% 7% 5%;
+    margin: 1% 0% 15% 5%;
     font-family: "Lato Light", sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -693,7 +732,52 @@ img, video, canvas {
     text-align: left;
     font-family: $teamNameFont;
     font-weight: bold;
-    margin: 0% 0% 7% 5%;
+    margin: 0% 0% 10% 5%;
     font-size: 1.5rem;
   }
+  .contactSocialSprite{
+    margin: 0;
+    .spriteIcon{
+      background: url(../img/contactSprite.png) no-repeat;
+      width: 15%;
+      padding: 0 0 15% 0;
+      display: inline-block;
+      background-size: 391.13% 100%;
+      margin: 10% 5% 0 0;
+    }
+
+    .fbIcon{
+      background-position: 0;
+    }
+    .twitterIcon{
+      background-position: 50% 0;
+    }
+    .gPlusIcon{
+      background-position: 100% 0;
+    }
+  }
+
 }
+
+/*footer section */
+
+.footer{
+  .footerLogo{
+    margin: 20% 0 10% 0;
+    text-align: center;
+    a{
+      text-decoration: none;
+      h2{
+        color: $teamNameFontColor;
+        font-family: $logoFontFace;
+        font-size: 3rem;
+        span{
+          color: $secondaryColor;
+        }
+      }
+    }
+
+  }
+}
+
+/* fin */

@@ -17,27 +17,29 @@ $(document).ready(function(){
     stickyMenu();
     function testimonialsSlider (){
         var listWithPictures = $(".testimonialsSlider").find("li");
-        var prevButton = $("#prevButton");
-        var nextButton = $("#nextButton");
+        var sliderNavDots = $(".sliderNav").find("li");
         var visiblePicture = 0;
 
         listWithPictures.eq(visiblePicture).removeClass("invisible");
+        sliderNavDots.eq(visiblePicture).removeClass("sliderNavNotActiveSlide");
 
-        nextButton.on("click", function(){
-           listWithPictures.eq(visiblePicture).addClass("invisible");
+        function moveSlide(visiblePicture) {
+            console.log("szybciutko?");
+            listWithPictures.eq(visiblePicture).addClass("invisible");
+            sliderNavDots.eq(visiblePicture).addClass("sliderNavNotActiveSlide");
             visiblePicture++;
             if(visiblePicture >= listWithPictures.length){
                 visiblePicture=0;
             }
             listWithPictures.eq(visiblePicture).removeClass("invisible");
-        });
-        prevButton.on("click", function(){
-           listWithPictures.eq(visiblePicture).addClass("invisible");
-            visiblePicture--;
-            if(visiblePicture < 0){
-                visiblePicture = listWithPictures.length-1;
-            }
-            listWithPictures.eq(visiblePicture).removeClass("invisible");
+            sliderNavDots.eq(visiblePicture).removeClass("sliderNavNotActiveSlide")
+        }
+
+
+        setInterval(moveSlide(visiblePicture), 1000);
+
+        sliderNavDots.on("click", function(){
+           console.log("clickclack")
         });
     }
     testimonialsSlider();
@@ -51,6 +53,16 @@ $(document).ready(function(){
             $(this).find(portfolioImgOverlay).hide();
         });
     }
-    galleryHover()
-
+    galleryHover();
+    function galleryBigPictures (){
+        var clickablePlus = $(".portfolioImgOverlay").find("span");
+        var bigPicture = $(".portfolioOverlayBig");
+        clickablePlus.on("click", function(){
+           $(this).parent().parent().next().addClass("portfolioOverlayBigDisplay");
+        });
+        bigPicture.on("click", function(){
+            $(this).removeClass("portfolioOverlayBigDisplay");
+        });
+    }
+    galleryBigPictures()
 });

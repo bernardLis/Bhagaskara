@@ -162,7 +162,7 @@ img, video, canvas {
   font-size: 2rem;
 }
 .menuLogo a {
-  color: #8d8d8d;
+  color: #484848;
   text-decoration: none;
 }
 .menuLogo span {
@@ -250,7 +250,7 @@ img, video, canvas {
 }
 .about .aboutLogo h2 {
   font-family: "Existance Light", sans-serif;
-  color: #676767;
+  color: #484848;
   font-size: 3rem;
   padding: 7%;
 }
@@ -326,6 +326,7 @@ img, video, canvas {
   position: relative;
 }
 .team .teamLogo h2 {
+  color: #484848;
   padding: 7%;
   font-family: "Existance Light", sans-serif;
   font-size: 3em;
@@ -405,6 +406,7 @@ img, video, canvas {
   position: relative;
 }
 .ourSkillsLogo h2 {
+  color: #484848;
   padding: 7%;
   font-family: "Existance Light", sans-serif;
   font-size: 3em;
@@ -529,6 +531,25 @@ img, video, canvas {
 .testimonials .testimonialsSlider .invisible {
   display: none;
 }
+.testimonials .testimonialsSlider .ol li {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  padding: 2%;
+  border-radius: 20%;
+}
+.testimonials .sliderNav {
+  text-align: center;
+}
+.testimonials .sliderNav li {
+  display: inline-block;
+  padding: 1%;
+  background-color: burlywood;
+  border-radius: 50%;
+}
+.testimonials .sliderNav .sliderNavNotActiveSlide {
+  background-color: goldenrod;
+}
 
 /*portfolio section */
 .portfolio .portfolioLogo {
@@ -539,6 +560,7 @@ img, video, canvas {
   position: relative;
 }
 .portfolio .portfolioLogo h2 {
+  color: #484848;
   padding: 7%;
   font-family: "Existance Light", sans-serif;
   font-size: 3em;
@@ -612,6 +634,7 @@ img, video, canvas {
   margin: auto;
   font-family: "Lato Thin", sans-serif;
   font-size: 12rem;
+  cursor: pointer;
 }
 .portfolio .portfolioThumbnails h3 {
   margin: 6% 2% 4% 2%;
@@ -623,6 +646,21 @@ img, video, canvas {
   font-family: "Lato Regular", sans-serif;
   font-size: 1rem;
   color: #777777;
+}
+.portfolio .portfolioOverlayBig {
+  display: none;
+}
+.portfolio .portfolioOverlayBigDisplay {
+  z-index: 1;
+  display: block;
+  width: 100%;
+  position: fixed;
+  padding: 20%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  background-color: rgba(42, 44, 44, 0.5);
 }
 .portfolio .portfolioBottomButton {
   text-align: center;
@@ -651,6 +689,7 @@ img, video, canvas {
   position: relative;
 }
 .contact .contactLogo h2 {
+  color: #484848;
   padding: 7%;
   font-family: "Existance Light", sans-serif;
   font-size: 3em;
@@ -712,7 +751,7 @@ img, video, canvas {
   box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .contact #contactText {
-  margin: 1% 0% 7% 5%;
+  margin: 1% 0% 15% 5%;
   font-family: "Lato Light", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -721,8 +760,47 @@ img, video, canvas {
   text-align: left;
   font-family: "Lato Bold", sans-serif;
   font-weight: bold;
-  margin: 0% 0% 7% 5%;
+  margin: 0% 0% 10% 5%;
   font-size: 1.5rem;
 }
+.contact .contactSocialSprite {
+  margin: 0;
+}
+.contact .contactSocialSprite .spriteIcon {
+  background: url(../img/contactSprite.png) no-repeat;
+  width: 15%;
+  padding: 0 0 15% 0;
+  display: inline-block;
+  background-size: 391.13% 100%;
+  margin: 10% 5% 0 0;
+}
+.contact .contactSocialSprite .fbIcon {
+  background-position: 0;
+}
+.contact .contactSocialSprite .twitterIcon {
+  background-position: 50% 0;
+}
+.contact .contactSocialSprite .gPlusIcon {
+  background-position: 100% 0;
+}
+
+/*footer section */
+.footer .footerLogo {
+  margin: 20% 0 10% 0;
+  text-align: center;
+}
+.footer .footerLogo a {
+  text-decoration: none;
+}
+.footer .footerLogo a h2 {
+  color: #484848;
+  font-family: "Existance Light", sans-serif;
+  font-size: 3rem;
+}
+.footer .footerLogo a h2 span {
+  color: #9f449b;
+}
+
+/* fin */
 
 /*# sourceMappingURL=style.css.map */
