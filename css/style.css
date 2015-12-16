@@ -76,7 +76,7 @@ img, video, canvas {
 .headerBackground {
   width: 100%;
   background-image: url("../img/headerCover.jpg");
-  padding-bottom: 81%;
+  padding-bottom: 70%;
   height: 0;
   background-repeat: no-repeat;
   border: 4px solid silver;
@@ -359,17 +359,17 @@ img, video, canvas {
 .team .teamPortraitContent {
   margin: 30% auto;
   border: 3px solid cornflowerblue;
-  width: 65%;
+  width: 70%;
   text-align: center;
   padding: 0 0 15% 0;
 }
 .team .teamPortraitContent .teamPortrait {
-  margin: 0 0 20% 0;
   width: 100%;
-  padding-bottom: 100%;
-  border-radius: 50%;
-  background-color: #8d8d8d;
   background-size: contain;
+  margin: 5% auto;
+}
+.team .teamPortraitContent .teamPortrait img {
+  border-radius: 100%;
 }
 .team .teamPortraitContent h3 {
   font-family: "Lato Bold", sans-serif;
@@ -497,18 +497,13 @@ img, video, canvas {
 .testimonials .testimonialsSlider {
   text-align: center;
 }
-.testimonials .testimonialsSlider .testimonialsPortraitContainer {
+.testimonials .testimonialsSlider .testimonialsPortrait {
   width: 20%;
-  margin: 0 auto;
-  border: 2px solid palegreen;
-}
-.testimonials .testimonialsSlider .testimonialsPortraitContainer .testimonialsPortrait {
-  margin: 0 0 20% 0;
-  width: 100%;
-  padding-bottom: 100%;
-  border-radius: 50%;
-  background-color: #8d8d8d;
   background-size: contain;
+  margin: 5% auto;
+}
+.testimonials .testimonialsSlider .testimonialsPortrait img {
+  border-radius: 100%;
 }
 .testimonials .testimonialsSlider ul {
   list-style: none;
@@ -543,12 +538,15 @@ img, video, canvas {
 }
 .testimonials .sliderNav li {
   display: inline-block;
-  padding: 1%;
-  background-color: burlywood;
+  padding: 0.5%;
+  border: 1px solid #4b4b4b;
+  background-color: #777777;
   border-radius: 50%;
+  cursor: pointer;
 }
 .testimonials .sliderNav .sliderNavNotActiveSlide {
-  background-color: goldenrod;
+  border: 1px solid #4b4b4b;
+  background-color: #eeeeee;
 }
 
 /*portfolio section */
@@ -603,10 +601,15 @@ img, video, canvas {
   font-size: 1rem;
 }
 .portfolio .portfolioButtons ul li:hover {
+  cursor: pointer;
   color: white;
   border-radius: 10%;
   background-color: #9f449b;
   border: 1px solid white;
+}
+.portfolio .portfolioCol {
+  width: 33.3%;
+  float: left;
 }
 .portfolio .portfolioThumbnails {
   text-align: center;
