@@ -141,14 +141,169 @@ $(document).ready(function(){
         });
     }
     /**
+     * Show more less button in gallery, DOES NOT WORK.
+     * */
+    /*
+    function portfolioGalleryShowMore (){
+        var portfolioHiddenItem = $(".portfolioHide");
+        var portfolioButtonClick = $(".portfolioBottomButton");
+        var portfolioButtonMore = $(".portfolioButtonMore");
+        var portfolioButtonLess = $(".portfolioButtonLess");
+        var portfolioItems = $(".portfolioCol");
+
+        portfolioButtonClick.on("click", function(event){
+            event.preventDefault();
+            portfolioItems.toggleClass("portfolioHide");
+            portfolioButtonMore.toggleClass("portfolioHiddenButton");
+            portfolioButtonLess.toggleClass("portfolioHiddenButton");
+            });
+        portfolioButtonMore.on("click", function(event){
+            portfolioItems.removeClass(".portfolioHide");
+
+        });
+    }
+*/
+
+    /**
      * form validation
+     * checks whether name is not numeric and has more than 5 characters
+     * checks whether email is correctly written
      */
-    function formvalidation (){
+    function formValidation (){
+        var name = $("#contactName");
+        var email = $("#contactEmail");
+        var contactForm = $(".contactForm");
+        var formError = $(".formError");
+        /**
+         *
+         * checks if the value in the field is numeric and longer than 5 characters
+         * if yes displays warning if no everything is fine.
+         *
+         */
+        name.on("input", function(event){
+            if($.isNumeric($(this).val())===true || $(this).val().length<5){
+                $(this).next().removeClass("formErrorHide");
+                $(this).next().addClass("formErrorShow");
+            }
+            else{
+                $(this).next().removeClass("formErrorShow");
+                $(this).next().addClass("formErrorHide");
+            }
+        });
+        /**
+         * checks whether email is correctly written
+         * if not displays message
+         * @param $email
+         * @returns {boolean}
+         */
+        function validateEmail($email) {
+            var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            return $email.length > 3 && emailReg.test($email);
+        }
+        email.on("input", function(event){
+            if(validateEmail(email.val())){
+                console.log("Asdasdads");
+                $(this).next().removeClass("formErrorShow");
+                $(this).next().addClass("formErrorHide");
+            }
+            else{
+                console.log("qwoieuqowiru");
+                $(this).next().removeClass("formErrorHide");
+                $(this).next().addClass("formErrorShow");
+            }
+        });
 
     }
-    formvalidation();
+
+    /**
+     * this 2 functions are connected with each other.
+     * first is responsible for changing the skillsset depending on a choosen team member
+     * second is resposible for changing the teammember on the arrow clikc.
+     *
+     * first - takes data sets from html data sets and adds it as widths of the colored bars
+     * and takes said data sets and adds it as a number to next to the skill name.
+     */
+    function teamSetSkillSets (){
+        var active = $(".active");
+        var webBar = $(".fullWebBar");
+        var htmlBar = $(".fullHtmlBar");
+        var graphicBar = $(".fullGraphicBar");
+        var uiBar = $(".fullUiBar");
+        var webPercent = $("#webPercent");
+        var htmlPercent = $("#htmlPercent");
+        var graphicPercent = $("#graphicPercent");
+        var uiPercent = $("#uiPercent");
+        var dataWeb = active.data('web');
+        var dataHtml = active.data('html');
+        var dataGraphic = active.data('graphic');
+        var dataUi = active.data('ui');
+
+        webPercent.html(dataWeb);
+        htmlPercent.html(dataHtml);
+        graphicPercent.html(dataGraphic);
+        uiPercent.html(dataUi);
+
+        webBar.animate({
+            width:dataWeb
+        });
+        htmlBar.animate({
+           width:dataHtml
+        });
+        graphicBar.animate({
+           width:dataGraphic
+        });
+        uiBar.animate({
+           width:dataUi
+        });
+    }
+    /**
+     * when clicked left the highlighted team member changes to the one left
+     * when clicked right the highlighted team memebr changes to the one right
+     *
+     */
+    function teamFunctionality (){
+        var teamArrowLeft = $(".teamArrowLeft");
+        var teamArrowRight = $(".teamArrowRight");
+        var teamMembers = $(".teamOpaque");
+
+        teamArrowLeft.on("click", function(){
+            var active = $(".active");
+            var indexActive = active.index();
+            if(indexActive < 0){
+                indexActive=teamMembers.length-1;
+            }
+            else {
+                indexActive--;
+            }
+            var prevActive = teamMembers.eq(indexActive);
+            teamMembers.removeClass("active");
+            prevActive.addClass("active");
+            teamSetSkillSets();
+        });
+        teamArrowRight.on("click", function(){
+            console.log("clickclack");
+            var active = $(".active");
+            var indexActive = active.index();
+            if(indexActive>=teamMembers.length-1){
+                indexActive=0;
+            }
+            else{
+                indexActive++;
+            }
+            var nextActive = teamMembers.eq(indexActive);
+            teamMembers.removeClass("active");
+            nextActive.addClass("active");
+            teamSetSkillSets();
+        });
+    }
+
+
+    formValidation();
+    teamSetSkillSets();
+    teamFunctionality();
     stickyMenu();
     testimonialsSlider();
+    //portfolioGalleryShowMore();
     portfolioGalleryHover();
     portfolioGalleryBigPictures();
     portfolioGallerySort();

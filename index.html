@@ -220,7 +220,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 teamOpaque" data-web="22%" data-html="15%" data-graphic="1%" data-ui="100%">
                 <div class="teamPortraitContent">
                     <div class="teamPortrait">
                         <img src="img/teamIcons/teamPortraits/jadenSmith.jpg" alt="Jaden Smith portrait"/>
@@ -233,7 +233,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-4 active teamOpaque" data-web="10%" data-html="75%" data-graphic="70%" data-ui="85%">
                 <div class="teamPortraitContent">
                     <div class="teamPortrait">
                         <img src="img/teamIcons/teamPortraits/nataliePortman.jpg" alt="natalie portman portrait"/>
@@ -246,7 +246,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-4 teamOpaque" data-web="70%" data-html="60%" data-graphic="20%" data-ui="10%">
                 <div class="teamPortraitContent">
                     <div class="teamPortrait">
                         <img src="img/teamIcons/teamPortraits/hakeemOlajuwon.jpg" alt="hakeem Olajuwon portrait"/>
@@ -276,22 +276,22 @@
         <div class="row ourSkillsContainer">
             <div class="col-6">
                 <div class="ourSkillsSkills">
-                    <h3>web desgin<span>90%</span></h3>
-                    <img src="img/teamIcons/webDesginBar.png" alt="90% bar"/>
+                    <h3>web desgin<span id="webPercent">90%</span></h3>
+                    <div class="emptyBar"><span class="fullWebBar"></span></div>
                 </div>
                 <div class="ourSkillsSkills">
-                    <h3>html/css<span>75%</span></h3>
-                    <img src="img/teamIcons/htmlBar.png" alt="75% bar"/>
+                    <h3>html/css<span id="htmlPercent">75%</span></h3>
+                    <div class="emptyBar"><span class="fullHtmlBar"></span></div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="ourSkillsSkills">
                     <h3>graphic design<span id="graphicPercent">70%</span></h3>
-                    <img src="img/teamIcons/graphicBar.png" alt="70% bar"/>
+                    <div class="emptyBar"><span class="fullGraphicBar"></span></div>
                 </div>
                 <div class="ourSkillsSkills">
                     <h3>ui/ux <span id="uiPercent">85%</span></h3>
-                    <img src="img/teamIcons/uiBar.png" alt="85% bar"/>
+                    <div class="emptyBar"><span class="fullUiBar"></span></div>
                 </div>
             </div>
         </div>
@@ -523,11 +523,51 @@
                     <p>icons</p>
                 </div>
             </div>
+            <div class="portfolioCol portfolioApps portfolioUi portfolioHide">
+                <div class="portfolioThumbnails">
+                    <div class="portfolioPhotoItem">
+                        <img src="img/portfolio/thumbnail6.jpg" alt="toronto skyline"/>
+                        <div class="portfolioImgOverlay"><span>+</span></div>
+                    </div>
+                    <div class="portfolioOverlayBig">
+                        <img src="img/portfolio/portfolioBigImg/portfolioBig6.jpg" alt="toronto skyline big" />
+                    </div>
+                    <h3>Don Quixote</h3>
+                    <p>apps, ui</p>
+                </div>
+            </div>
+            <div class="portfolioCol portfolioIcons portfolioUi portfolioHide">
+                <div class="portfolioThumbnails">
+                    <div class="portfolioPhotoItem">
+                        <img src="img/portfolio/thumbnail6.jpg" alt="toronto skyline"/>
+                        <div class="portfolioImgOverlay"><span>+</span></div>
+                    </div>
+                    <div class="portfolioOverlayBig">
+                        <img src="img/portfolio/portfolioBigImg/portfolioBig6.jpg" alt="toronto skyline big" />
+                    </div>
+                    <h3>Ulysses</h3>
+                    <p>icons, ui</p>
+                </div>
+            </div>
+            <div class="portfolioCol portfolioIcons portfolioApps portfolioHide">
+                <div class="portfolioThumbnails">
+                    <div class="portfolioPhotoItem">
+                        <img src="img/portfolio/thumbnail6.jpg" alt="toronto skyline"/>
+                        <div class="portfolioImgOverlay"><span>+</span></div>
+                    </div>
+                    <div class="portfolioOverlayBig">
+                        <img src="img/portfolio/portfolioBigImg/portfolioBig6.jpg" alt="toronto skyline big" />
+                    </div>
+                    <h3>In Search of Lost Time</h3>
+                    <p>apps, icons</p>
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="portfolioBottomButton">
-                    <a href="#">Watch more</a>
+                    <a class="portfolioButtonMore" href="#">Show more</a>
+                    <a class="portfolioButtonLess portfolioHiddenButton" href="#">Show less</a>
                 </div>
             </div>
         </div>
@@ -550,8 +590,10 @@
         </div>
         <div class="row">
             <div class="col-6 contactForm">
-                <input id="contactName" class="contactFormInput" type="text" name="name" placeholder="Your Name" />
+                <input id="contactName" class="contactFormInput" type="text" name="name" placeholder="Your Name"/>
+                <span class="formErrorHide">Please enter valid name</span>
                 <input id="contactEmail" class="contactFormInput" type="email" name="email" placeholder="Your Email" />
+                <span class="formErrorHide">Please enter valid email</span>
                 <textarea id="contactMessage" class="contactFormInput" name="message" rows="10" cols="20" placeholder="Your Message"></textarea>
                 <a id="contactSend" href="#">Send email</a>
             </div>

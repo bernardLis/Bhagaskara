@@ -20,7 +20,6 @@ img, video, canvas {
 .gridContainer .row [class*="col-"] {
   float: left;
   min-height: 1px;
-  border: 1px solid red;
 }
 .gridContainer .row .col-1 {
   width: 8.3%;
@@ -66,7 +65,6 @@ img, video, canvas {
 }
 
 .siteWidth {
-  border: 2px solid gold;
   width: 80%;
   margin: 0 auto;
   max-width: 1170px;
@@ -79,7 +77,6 @@ img, video, canvas {
   padding-bottom: 70%;
   height: 0;
   background-repeat: no-repeat;
-  border: 4px solid silver;
 }
 
 .headerLogo h1 {
@@ -117,7 +114,6 @@ img, video, canvas {
   margin: 20% 0 0 0;
 }
 .headerIcon img {
-  border: 4px solid greenyellow;
   width: 50%;
 }
 
@@ -156,8 +152,8 @@ img, video, canvas {
 }
 
 .menuLogo {
+  margin: 0.5% 0 0 0;
   text-align: left;
-  border: 3px solid seagreen;
   font-family: "Existance Light", sans-serif;
   font-size: 2rem;
 }
@@ -173,13 +169,13 @@ img, video, canvas {
   width: 100%;
   background-color: white;
   height: 50px;
-  border: 2px solid black;
 }
 .menuSticky ul {
+  margin: 2% 0 0 0;
   text-align: right;
 }
 .menuSticky ul li {
-  border: 2px solid greenyellow;
+  margin: 0 2% 0 0;
   display: inline;
 }
 .menuSticky ul li a {
@@ -203,7 +199,6 @@ img, video, canvas {
 /* big adjectives let's call it content, changed my mind it is gonna be called feature */
 .feature {
   background-color: #eeeeee;
-  border: 2px solid gold;
   padding: 7% 0;
   text-align: center;
 }
@@ -243,10 +238,9 @@ img, video, canvas {
   text-align: center;
 }
 .about .aboutLogo {
-  margin: 10% auto;
-  border: 3px solid green;
+  margin: 3% auto;
   position: relative;
-  width: 35%;
+  width: 25%;
 }
 .about .aboutLogo h2 {
   font-family: "Existance Light", sans-serif;
@@ -320,9 +314,8 @@ img, video, canvas {
 /* team section */
 .team .teamLogo {
   text-align: center;
-  border: 3px solid green;
-  width: 30%;
-  margin: 10% auto;
+  width: 25%;
+  margin: 5% auto 2% auto;
   position: relative;
 }
 .team .teamLogo h2 {
@@ -352,16 +345,21 @@ img, video, canvas {
 .team .teamArrowLeft {
   text-align: right;
 }
+.team .teamArrowLeft img {
+  margin: 0 1% 0 0;
+  cursor: pointer;
+}
 .team .teamArrowRight {
-  padding: 4px 0 0 4px;
   text-align: left;
 }
+.team .teamArrowRight img {
+  margin: 0 0 0 1%;
+  cursor: pointer;
+}
 .team .teamPortraitContent {
-  margin: 30% auto;
-  border: 3px solid cornflowerblue;
+  margin: 2% auto;
   width: 70%;
   text-align: center;
-  padding: 0 0 15% 0;
 }
 .team .teamPortraitContent .teamPortrait {
   width: 100%;
@@ -385,24 +383,29 @@ img, video, canvas {
   margin: 0 0 7% 0;
 }
 .team .teamPortraitContent .teamSocialSprite .spriteIcon {
-  background: url(../img/sprite.png) no-repeat;
+  background: url(../img/contactSprite.png) no-repeat;
   width: 20%;
   padding: 0 0 20% 0;
   display: inline-block;
-  background-size: 385.41% 302.12%;
+  background-size: 396.15% 100%;
 }
 .team .teamPortraitContent .teamSocialSprite .fbIcon {
-  background-position: 0 1%;
+  background-position: 0% 0%;
 }
 .team .teamPortraitContent .teamSocialSprite .gPlusIcon {
-  background-position: 37.95% 1%;
+  background-position: 100% 0%;
+}
+.team .teamOpaque {
+  opacity: 0.5;
+}
+.team .active {
+  opacity: 1;
 }
 
 .ourSkillsLogo {
   text-align: center;
-  border: 3px solid green;
-  width: 30%;
-  margin: 10% auto;
+  width: 25%;
+  margin: 1% auto;
   position: relative;
 }
 .ourSkillsLogo h2 {
@@ -431,19 +434,41 @@ img, video, canvas {
 }
 
 .ourSkillsContainer {
-  margin: 10% 0 25% 0;
+  margin: 1% 0 10% 0;
 }
 .ourSkillsContainer .ourSkillsSkills h3 {
   text-transform: uppercase;
   font-family: "Lato Bold", sans-serif;
   font-size: 1.6rem;
-  margin: 10% 0 5% 0;
+  margin: 4% 0 5% 0;
 }
 .ourSkillsContainer .ourSkillsSkills h3 span {
   float: right;
   font-family: "Lato Regular", sans-serif;
   color: #8d8d8d;
   margin: 0 10% 0 0;
+}
+.ourSkillsContainer .ourSkillsSkills .emptyBar {
+  height: 20px;
+  width: 90%;
+  background-color: #8d8d8d;
+}
+.ourSkillsContainer .ourSkillsSkills .fullWebBar, .ourSkillsContainer .ourSkillsSkills .fullHtmlBar, .ourSkillsContainer .ourSkillsSkills .fullGraphicBar, .ourSkillsContainer .ourSkillsSkills .fullUiBar {
+  height: 20px;
+  display: block;
+  background-color: #9f449b;
+}
+.ourSkillsContainer .ourSkillsSkills .fullWebBar {
+  width: 0%;
+}
+.ourSkillsContainer .ourSkillsSkills .fullHtmlBar {
+  width: 75%;
+}
+.ourSkillsContainer .ourSkillsSkills .fullGraphicBar {
+  width: 70%;
+}
+.ourSkillsContainer .ourSkillsSkills .fullUiBar {
+  width: 85%;
 }
 
 /* service with amazing quote */
@@ -473,7 +498,7 @@ img, video, canvas {
 
 /* statistics section */
 .statistics {
-  padding: 10% 0;
+  padding: 4% 0;
   background-color: #eeeeee;
   text-align: center;
 }
@@ -492,13 +517,12 @@ img, video, canvas {
 /* testimonials section */
 .testimonials {
   background-color: #eeeeee;
-  padding: 10% 0;
 }
 .testimonials .testimonialsSlider {
   text-align: center;
 }
 .testimonials .testimonialsSlider .testimonialsPortrait {
-  width: 20%;
+  width: 15%;
   background-size: contain;
   margin: 5% auto;
 }
@@ -507,7 +531,6 @@ img, video, canvas {
 }
 .testimonials .testimonialsSlider ul {
   list-style: none;
-  border: 2px solid darkolivegreen;
 }
 .testimonials .testimonialsSlider ul p {
   margin: 5% 0;
@@ -535,26 +558,26 @@ img, video, canvas {
 }
 .testimonials .sliderNav {
   text-align: center;
+  margin: 0 0 4% 0;
 }
 .testimonials .sliderNav li {
   display: inline-block;
   padding: 0.5%;
-  border: 1px solid #4b4b4b;
   background-color: #777777;
   border-radius: 50%;
   cursor: pointer;
+  border: 1px solid #777777;
 }
 .testimonials .sliderNav .sliderNavNotActiveSlide {
-  border: 1px solid #4b4b4b;
   background-color: #eeeeee;
+  border: 1px solid #777777;
 }
 
 /*portfolio section */
 .portfolio .portfolioLogo {
   text-align: center;
-  border: 3px solid green;
-  width: 50%;
-  margin: 10% auto;
+  width: 30%;
+  margin: 3% auto;
   position: relative;
 }
 .portfolio .portfolioLogo h2 {
@@ -608,12 +631,11 @@ img, video, canvas {
   border: 1px solid white;
 }
 .portfolio .portfolioCol {
-  width: 33.3%;
+  width: 33.2%;
   float: left;
 }
 .portfolio .portfolioThumbnails {
   text-align: center;
-  border: 3px solid greenyellow;
   width: 100%;
   padding: 2%;
 }
@@ -650,6 +672,9 @@ img, video, canvas {
   font-size: 1rem;
   color: #777777;
 }
+.portfolio .portfolioHide {
+  display: none;
+}
 .portfolio .portfolioOverlayBig {
   display: none;
 }
@@ -679,6 +704,9 @@ img, video, canvas {
   font-family: "Lato Light", sans-serif;
   box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0.75);
 }
+.portfolio .portfolioHiddenButton {
+  display: none;
+}
 
 /* contact section */
 .contact {
@@ -686,9 +714,8 @@ img, video, canvas {
 }
 .contact .contactLogo {
   text-align: center;
-  border: 3px solid green;
-  width: 50%;
-  margin: 10% auto;
+  width: 30%;
+  margin: 3% auto;
   position: relative;
 }
 .contact .contactLogo h2 {
@@ -753,6 +780,13 @@ img, video, canvas {
   font-size: 1.5rem;
   box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0.75);
 }
+.contact .contactForm .formErrorShow {
+  color: #9f449b;
+  font-family: "Lato Light", sans-serif;
+}
+.contact .contactForm .formErrorHide {
+  display: none;
+}
 .contact #contactText {
   margin: 1% 0% 15% 5%;
   font-family: "Lato Light", sans-serif;
@@ -789,7 +823,7 @@ img, video, canvas {
 
 /*footer section */
 .footer .footerLogo {
-  margin: 20% 0 10% 0;
+  margin: 5% 0 10% 0;
   text-align: center;
 }
 .footer .footerLogo a {

@@ -18,7 +18,6 @@ img, video, canvas {
     [class*="col-"]{
       float: left;
       min-height: 1px;
-      border: 1px solid red;
     }
     @for $i from 1 through 12{
       .col-#{$i} {
@@ -34,7 +33,6 @@ img, video, canvas {
   }
 }
 .siteWidth{
-  border: 2px solid gold;
   width: 80%;
   margin: 0 auto;
   max-width: 1170px;
@@ -47,7 +45,6 @@ img, video, canvas {
   padding-bottom: 70%;
   height:0;
   background-repeat: no-repeat;
-  border: 4px solid silver;
 }
 .headerLogo h1{
   margin: 5% 0 0 0;
@@ -81,7 +78,6 @@ img, video, canvas {
   padding: 3% 0;
   margin: 20% 0 0 0;
   img{
-    border: 4px solid greenyellow;
     width: 50%;
   }
 }
@@ -117,8 +113,8 @@ img, video, canvas {
   height: 50px;
 }
 .menuLogo{
+  margin: 0.5% 0 0 0;
   text-align: left;
-  border: 3px solid seagreen;
   font-family: $logoFontFace;
   font-size: 2rem;
   a{
@@ -133,11 +129,12 @@ img, video, canvas {
   width: 100%;
   background-color: white;
   height: 50px;
-  border: 2px solid black;
   ul{
+    margin: 2% 0 0 0;
+
     text-align: right;
     li{
-      border: 2px solid greenyellow;
+      margin: 0 2% 0 0;
       display: inline;
       a{
         font-family: $headlineFontFace;
@@ -163,7 +160,6 @@ img, video, canvas {
 
 .feature{
   background-color: $secondaryBackgroundColor;
-  border: 2px solid gold;
   padding: 7% 0;
   text-align: center;
   svg {
@@ -203,10 +199,9 @@ img, video, canvas {
 .about{
   text-align: center;
   .aboutLogo{
-    margin: 10% auto;
-    border: 3px solid green;
+    margin: 3% auto;
     position: relative;
-    width: 35%;
+    width: 25%;
     h2{
       font-family: $logoFontFace;
       color: $teamNameFontColor;
@@ -284,9 +279,8 @@ img, video, canvas {
 .team{
   .teamLogo{
     text-align: center;
-    border: 3px solid green;
-    width: 30%;
-    margin: 10% auto;
+    width: 25%;
+    margin: 5% auto 2% auto;
     position: relative;
     h2{
       color: $teamNameFontColor;
@@ -315,17 +309,24 @@ img, video, canvas {
   }
   .teamArrowLeft {
     text-align: right;
+    img{
+      margin: 0 1% 0 0;
+      cursor: pointer;
+    }
   }
   .teamArrowRight{
-    padding: 4px 0 0 4px;
     text-align: left;
+
+    img{
+      margin: 0 0 0 1%;
+
+      cursor: pointer;
+    }
   }
   .teamPortraitContent{
-    margin: 30% auto;
-    border: 3px solid cornflowerblue;
+    margin: 2% auto;
     width: 70%;
     text-align: center;
-    padding: 0 0 15% 0;
     .teamPortrait{
       width: 100%;
       background-size: contain;
@@ -333,7 +334,6 @@ img, video, canvas {
       img{
         border-radius: 100%;
       }
-
     }
     h3{
       font-family: $teamNameFont;
@@ -350,26 +350,31 @@ img, video, canvas {
     }
     .teamSocialSprite{
       .spriteIcon{
-        background: url(../img/sprite.png) no-repeat;
+        background: url(../img/contactSprite.png) no-repeat;
         width: 20%;
         padding: 0 0 20% 0;
         display: inline-block;
-        background-size: 385.41% 302.12%;
+        background-size: 396.15% 100%;
       }
       .fbIcon{
-        background-position: 0 1%;
+        background-position: 0% 0%;
       }
       .gPlusIcon{
-        background-position: 37.95% 1%;
+        background-position: 100% 0%;
       }
     }
+  }
+  .teamOpaque {
+  opacity: 0.5;
+  }
+  .active{
+    opacity: 1;
   }
 }
 .ourSkillsLogo{
     text-align: center;
-    border: 3px solid green;
-    width: 30%;
-    margin: 10% auto;
+    width: 25%;
+    margin: 1% auto;
     position: relative;
     h2{
       color: $teamNameFontColor;
@@ -397,19 +402,45 @@ img, video, canvas {
     }
 }
 .ourSkillsContainer{
-  margin: 10% 0 25% 0;
+  margin: 1% 0 10% 0;
   .ourSkillsSkills {
     h3 {
       text-transform: uppercase;
       font-family: $teamNameFont;
       font-size: 1.6rem;
-      margin: 10% 0 5% 0;
+      margin: 4% 0 5% 0;
       span {
         float: right;
         font-family: $teamPositionFont;
         color: $menuGreyColor;
         margin: 0 10% 0 0;
       }
+    }
+    .emptyBar{
+      height: 20px;
+      width: 90%;
+      background-color: $menuGreyColor;
+    }
+    %violetBar {
+      height: 20px;
+      display:block;
+      background-color: $secondaryColor;
+    }
+    .fullWebBar{
+      @extend %violetBar;
+      width: 0%;
+    }
+    .fullHtmlBar{
+      @extend %violetBar;
+      width: 75%;
+    }
+    .fullGraphicBar {
+      @extend %violetBar;
+      width: 70%;
+    }
+    .fullUiBar{
+      @extend %violetBar;
+      width: 85%;
     }
   }
 }
@@ -443,7 +474,7 @@ img, video, canvas {
 /* statistics section */
 
 .statistics{
-  padding: 10% 0;
+  padding: 4% 0;
   background-color: $secondaryBackgroundColor;
   text-align: center;
   h2{
@@ -462,11 +493,10 @@ img, video, canvas {
 /* testimonials section */
 .testimonials{
   background-color: $secondaryBackgroundColor;
-  padding: 10% 0;
   .testimonialsSlider{
     text-align: center;
       .testimonialsPortrait{
-        width: 20%;
+        width: 15%;
         background-size: contain;
         margin: 5% auto;
         img{
@@ -475,7 +505,6 @@ img, video, canvas {
       }
     ul{
       list-style: none;
-      border: 2px solid darkolivegreen;
       p{
         margin: 5% 0;
         color: $testimonialsPColor;
@@ -504,20 +533,18 @@ img, video, canvas {
   }
   .sliderNav{
     text-align: center;
+    margin: 0 0 4% 0;
     li{
       display: inline-block;
       padding: 0.5%;
-      border: 1px solid $testimonialsPColor;
       background-color: $statisticsPColor;
-
       border-radius: 50%;
       cursor: pointer;
-
+      border: 1px solid $statisticsPColor;
     }
     .sliderNavNotActiveSlide{
-      border: 1px solid $testimonialsPColor;
       background-color: $secondaryBackgroundColor;
-
+      border: 1px solid $statisticsPColor;
     }
   }
 }
@@ -526,9 +553,8 @@ img, video, canvas {
 .portfolio {
   .portfolioLogo {
     text-align: center;
-    border: 3px solid green;
-    width: 50%;
-    margin: 10% auto;
+    width: 30%;
+    margin: 3% auto;
     position: relative;
     h2 {
       color: $teamNameFontColor;
@@ -582,12 +608,11 @@ img, video, canvas {
     }
   }
   .portfolioCol{
-    width: 33.3%;
+    width: 33.2%;
     float: left;
   }
   .portfolioThumbnails{
     text-align: center;
-    border: 3px solid greenyellow;
     width: 100%;
     padding: 2%;
     .portfolioPhotoItem{
@@ -624,6 +649,10 @@ img, video, canvas {
       color: $statisticsPColor;
     }
   }
+  .portfolioHide{
+    display: none;
+  }
+
   .portfolioOverlayBig{
     display: none;
   }
@@ -653,6 +682,9 @@ img, video, canvas {
       box-shadow: -2px 4px 5px 0px rgba(0,0,0,0.75);
     }
   }
+  .portfolioHiddenButton{
+    display: none;
+  }
 }
 
 /* contact section */
@@ -660,9 +692,8 @@ img, video, canvas {
   text-align: center;
   .contactLogo {
     text-align: center;
-    border: 3px solid green;
-    width: 50%;
-    margin: 10% auto;
+    width: 30%;
+    margin: 3% auto;
     position: relative;
     h2 {
       color: $teamNameFontColor;
@@ -726,6 +757,13 @@ img, video, canvas {
       font-size: 1.5rem;
       box-shadow: -2px 4px 5px 0px rgba(0,0,0,0.75);
     }
+    .formErrorShow{
+      color: $secondaryColor;
+      font-family: $headlineFontFace;
+    }
+    .formErrorHide{
+      display:none;
+    }
   }
   #contactText{
     margin: 1% 0% 15% 5%;
@@ -768,7 +806,7 @@ img, video, canvas {
 
 .footer{
   .footerLogo{
-    margin: 20% 0 10% 0;
+    margin: 5% 0 10% 0;
     text-align: center;
     a{
       text-decoration: none;
