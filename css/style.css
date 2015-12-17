@@ -665,6 +665,7 @@ img, video, canvas {
   margin: 6% 2% 4% 2%;
   font-family: "Lato Regular", sans-serif;
   font-size: 1.5rem;
+  height: 2.5rem;
 }
 .portfolio .portfolioThumbnails p {
   margin: 0 0 5% 0;
