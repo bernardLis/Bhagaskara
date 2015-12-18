@@ -1,7 +1,18 @@
 # Bhagaskara
-Project of web page for some kind of design agency.
+Project of web page for Your design agency.
 
-It is a web page created in a grid. It should be responsive someday. 
-I am doing it because it is one of the tasks on the course I am attending right now - front end by coder's lab.
+It is a web page created in a grid, without any plugins. It is fully scalable.
 
-Btw. if you google search you can easily find it available to buy.
+I am glad that you asked me about its fucntionality, let me give you a quick tour:
+
+smooth scroll - if you click on any link in the menu or in the top section it is gonna scroll down smooothly to the section that caught Your interest!
+
+sticky menu - the menu that sticks on scroll, simple but useful, just the way You want it. 
+
+team section is fully functional! You can change the person (by clicking arrows) and you gonna get his/her skills! 
+
+there is a testimonials slider, for when you want to show others what some people think about You and Your work! It is pretty cool coz you have a dot navigation for it. 
+
+'our portfolio' section is craaazy good! if you have said that my web page is chicago bulls team from 90's, this section would be Michael Jordan! What I mean is that you can sort the pictures by their tags, when you hover on the picture there is overlay apearing and when you click on it the full size picture shows up! 
+
+and as for the cherry on the top of this html/css/js pie there is a form validation.
