@@ -1,5 +1,6 @@
 # Bhagaskara
-Project of web page for Your design agency.
+Project of web page for the best design agency in the world. 
+Although it is work in progress, currently this website is pretty amazing. 
 
 It is a web page created in a grid, without any plugins. It is fully scalable.
 
