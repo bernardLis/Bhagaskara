@@ -1,4 +1,5 @@
 # Bhagaskara
+For unknown reasons for now the website is only cool when viewed in chrome... <3 
 Project of web page for Your design agency.
 
 It is a web page created in a grid, without any plugins. It is fully scalable.
